@@ -15,7 +15,10 @@ import os
 
 # Criar nova apresentação (do zero)
 prs = Presentation()
-output_path = "/workspace/Apresentacao_TFC_Grafica_Finda_N.pptx"
+
+# Usar diretório atual em vez de /workspace/
+current_dir = os.path.dirname(os.path.abspath(__file__))
+output_path = os.path.join(current_dir, "Apresentacao_TFC_Grafica_Finda_N.pptx")
 
 # Configurar tamanho do slide (16:9)
 prs.slide_width = Inches(13.333)
